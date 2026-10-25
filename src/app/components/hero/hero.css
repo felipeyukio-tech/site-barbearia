@@ -1,0 +1,85 @@
+.hero {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.subtitle {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero h1 .highlight {
+  color: #d4af37;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: #d4af37;
+  color: #121212;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #b89728;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #d4af37;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #d4af37;
+  color: #121212;
+}

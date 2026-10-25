@@ -1,0 +1,60 @@
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="section-header">
+      <span class="subtitle">Reserve o seu estilo</span>
+      <h2>Agende seu <span class="highlight">Horário</span></h2>
+      <p class="section-desc">Garanta o seu atendimento com os melhores profissionais da região.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <!-- Formulário de Agendamento Centralizado -->
+      <form class="appointment-form" (submit)="agendar($event)">
+        <h3>Marcar Atendimento</h3>
+        
+        <div class="form-group">
+          <label for="nome">Seu Nome</label>
+          <input type="text" id="nome" [(ngModel)]="nomeCliente" name="nome" placeholder="Ex: Lucas Mendes" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input type="text" id="telefone" [(ngModel)]="telefoneCliente" name="telefone" placeholder="(11) 99999-9999" required>
+        </div>
+
+        <div class="form-group">
+          <label for="servico">Serviço Desejado</label>
+          <select id="servico" [(ngModel)]="servicoSelecionado" name="servico">
+            <option value="Corte Cabelo - R$ 45">Corte Cabelo - R$ 45</option>
+            <option value="Barba à Toalha Quente - R$ 35">Barba à Toalha Quente - R$ 35</option>
+            <option value="Combo Kings (Cabelo + Barba) - R$ 70">Combo Kings (Cabelo + Barba) - R$ 70</option>
+            <option value="Pézinho / Acabamento - R$ 25">Pézinho / Acabamento - R$ 25</option>
+            <option value="Pigmentação - R$ 50">Pigmentação - R$ 50</option>
+            <option value="Tratamento & Hidratação - R$ 50">Tratamento & Hidratação - R$ 50</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" id="data" [(ngModel)]="dataSelecionada" name="data" required>
+          </div>
+          <div class="form-group">
+            <label for="horario">Horário</label>
+            <select id="horario" [(ngModel)]="horarioSelecionado" name="horario">
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:30">14:30</option>
+              <option value="16:00">16:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Confirmar Agendamento</button>
+      </form>
+    </div>
+  </div>
+</section>

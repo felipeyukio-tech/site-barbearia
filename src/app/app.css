@@ -1,0 +1,14 @@
+/* Reseta completamente qualquer margem ou moldura em volta do navegador */
+html, body, app-root {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #121212 !important;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}

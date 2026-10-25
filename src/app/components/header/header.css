@@ -1,0 +1,153 @@
+/* Reset global e correção da moldura do site */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #121212 !important;
+  color: #ffffff;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #121212 !important;
+  border-bottom: 1px solid #222222;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.logo span {
+  color: #d4af37;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav a {
+  cursor: pointer;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #d4af37 !important;
+}
+
+.adm-tab-link {
+  color: #d4af37 !important;
+  border: 1px solid #d4af37;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.adm-tab-link:hover {
+  background-color: #d4af37;
+  color: #121212 !important;
+}
+/* ================================================= */
+/* RESPONSIVIDADE COMPLETA (COMPUTADOR E CELULAR)    */
+/* ================================================= */
+
+@media (max-width: 768px) {
+  /* Cabeçalho adaptado para telas pequenas */
+  .header .container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  /* Tela Inicial (Hero) */
+  .hero h1 {
+    font-size: 30px !important;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* Secção de Serviços (Grade adaptada) */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 15px;
+  }
+
+  /* Formulários (Contato e Agendamentos) */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .appointment-form, .login-box {
+    padding: 20px;
+    margin: 0 15px;
+  }
+
+  /* Tabelas do Administrador no telemóvel */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .adm-table th, .adm-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}

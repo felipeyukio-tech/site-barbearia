@@ -1,0 +1,115 @@
+.contact {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 80px 20px;
+  min-height: 80vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.section-header h2 {
+  font-size: 38px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-header h2 .highlight {
+  color: #d4af37;
+}
+
+.section-desc {
+  color: #aaaaaa;
+  font-size: 16px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment-form {
+  background-color: #181818;
+  border: 1px solid #252525;
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.appointment-form h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #cccccc;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 12px;
+  background-color: #121212;
+  border: 1px solid #333333;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: #d4af37;
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #d4af37;
+  color: #121212;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #b89728;
+}

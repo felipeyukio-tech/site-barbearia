@@ -1,0 +1,72 @@
+<section class="admin-section">
+  <div class="container">
+    
+    <!-- Tela de Login (Se não estiver logado) -->
+    <div class="login-box" *ngIf="!isAdminLogado">
+      <div class="section-header">
+        <span class="subtitle">Área Restrita</span>
+        <h2>Painel <span class="highlight">Administrativo</span></h2>
+        <p class="section-desc">Insira a senha de acesso para gerenciar os agendamentos da barbearia.</p>
+      </div>
+
+      <form class="form-login" (submit)="fazerLogin($event)">
+        <div class="form-group">
+          <label for="senha">Senha de Acesso</label>
+          <input type="password" id="senha" [(ngModel)]="senhaDigitada" name="senha" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit" class="btn-submit">Entrar no Sistema</button>
+        <p class="error-msg" *ngIf="erroSenha">Senha incorreta! Tente novamente.</p>
+      </form>
+    </div>
+
+    <!-- Painel de Gestão (Visível após o login) -->
+    <div class="dashboard" *ngIf="isAdminLogado">
+      <div class="section-header">
+        <span class="subtitle">Gestão ao Vivo</span>
+        <h2>Controle de <span class="highlight">Atendimentos</span></h2>
+        <p class="section-desc">Acompanhe os clientes agendados, conclua ou limpe a lista de atendimento.</p>
+        
+        <!-- Botão para limpar a página por completo -->
+        <button class="btn-limpar-tudo" (click)="limparTudo()">🗑️ Limpar Página (Começar do Zero)</button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="adm-table">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Serviço</th>
+              <th>Data / Horário</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of agendamentos()">
+              <td><strong>{{ item.nome }}</strong><br><small>{{ item.telefone }}</small></td>
+              <td>{{ item.servico }}</td>
+              <td>{{ item.data }} às {{ item.horario }}</td>
+              <td>
+                <span class="status-badge" [class.concluido]="item.status === 'Concluído'">
+                  {{ item.status }}
+                </span>
+              </td>
+              <td class="actions-cell">
+                <button *ngIf="item.status === 'Pendente'" class="btn-concluir" (click)="concluirCorte(item.id)">
+                  ✓ Concluir
+                </button>
+                <button class="btn-excluir" (click)="excluirAgendamento(item.id)">
+                  Excluir
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="agendamentos().length === 0">
+              <td colspan="5" class="empty-list">Nenhum agendamento registado no momento.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
